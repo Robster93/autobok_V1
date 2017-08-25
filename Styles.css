@@ -74,6 +74,7 @@ height: auto;
   height: auto;
   position: relative;
   margin: auto;
+  overflow: hidden;
 }
 
 .mySlides {
