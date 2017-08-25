@@ -57,3 +57,11 @@ max-width: 800px;
 width: 100%;
 height: auto;
 }
+
+.tabContent {
+    display: none;
+    padding: 6px 12px;
+    padding-left: 16px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
