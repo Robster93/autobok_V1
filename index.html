@@ -12,30 +12,30 @@
         </div>
                     
         <div class="topnav" id="myTopnav">
-            <a href="#home" class="tabLinks" onclick="openTab('home')">Home</a>
-            <a href="#news" class="tabLinks" onclick="openTab('news')">News</a>
-            <a href="#contact" class="tabLinks" onclick="openTab('contact')">Contact</a>
-            <a href="#about" class="tabLinks" onclick="openTab('about')">About</a>
+            <a href="#Home" class="tabLinks" onclick="openTab('Home')">Home</a>
+            <a href="#Service" class="tabLinks" onclick="openTab('Service')">Service</a>
+            <a href="#Team" class="tabLinks" onclick="openTab('Team')">Team</a>
+            <a href="#Kontakt" class="tabLinks" onclick="openTab('Kontakt')">Kontakt</a>
             <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="responsiveNavAdjuster()">&#9776;</a>
         </div>
                     
-        <div id="home" class="tabContent" style="display: block; height: 100%;" >
+        <div id="Home" class="tabContent" style="display: block; height: 100%;" >
              <div class="slideshow-container">
                 <div class="mySlides fade">
                     <div class="numbertext"></div>
-                    <img src="Images/testbild.jpeg" style="display: block; margin: auto; width: 60%; height: 100%;">
+                    <img src="Images/testbild.jpeg" style="display: block; margin: auto; width: 100%; height: 100%;">
                     <div class="text"></div>
                 </div>
 
                 <div class="mySlides fade">
                     <div class="numbertext"></div>
-                    <img src="Images/Logo.JPG" style="display: block; margin: auto; width: 60%; height: 100%;">
+                    <img src="Images/Logo.JPG" style="display: block; margin: auto; width: 100%; height: 100%;">
                     <div class="text"></div>
                 </div>
 
                 <div class="mySlides fade">
                     <div class="numbertext"></div>
-                    <img src="Images/testbild.jpeg" style="display: block; margin: auto; width: 60%; height: 100%;">
+                    <img src="Images/testbild.jpeg" style="display: block; margin: auto; width: 100%; height: 100%;">
                     <div class="text"></div>
                 </div>
 
@@ -44,22 +44,46 @@
             </div>
             <br>
 
+
+
+            <!--
             <div style="text-align:center">
                 <span class="dot" onclick="currentSlide(1)"></span>
                 <span class="dot" onclick="currentSlide(2)"></span>
                 <span class="dot" onclick="currentSlide(3)"></span>
             </div> 
+            -->
+            <div id="indroducer_div" class="introducer">
+                <h1 id="indroducer_header">AUTO-BOK</h1>
+                <p id="introducer_text">Wir sind ein top Unternehmen...</p>
+            </div>
+        
         </div>
 
-        <div id="news" class="tabContent">
-            <h2>Responsive Topnav Example</h2>
+        <div id="Service" class="tabContent">
+            <h1 class="introducer">Unser Service</h1>
+            <br>
+            <div class="contentContainer">
+                <div class="serviceContainer">
+                    <img src="Images/testbild.jpeg">
+                    <h3>Reparatur</h3>
+                    <p>Wir reparieren alles</p>
+                </div>
+                
+                <div class="serviceContainer">
+                    <img src="Images/testbild.jpeg">
+                    <h3>Reparatur</h3>
+                    <p>Wir reparieren alles</p>
+                </div>
+            </div>            
         </div>
         
-        <div id="contact" class="tabContent">
+        <div id="Team" class="tabContent">
+            <br>
             <h1>halsdh</h1>
         </div>
 
-        <div id="about" class="tabContent">
+        <div id="Kontakt" class="tabContent">
         </div>
                  
     </body>

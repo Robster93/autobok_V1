@@ -2,7 +2,7 @@ html {
     height: 100%;
 }
 
-body {margin:0; height: 100%;}
+body {margin:0; height: 100%; font-family: Tahoma}
 
 .topnav {
 overflow: hidden;
@@ -66,7 +66,6 @@ height: auto;
     display: none;
     padding: 6px 12px;
     padding-left: 16px;
-    border: 1px solid #ccc;
     border-top: none;
 }
 
@@ -75,7 +74,7 @@ height: auto;
 /* Slideshow container */
 .slideshow-container {
   width: 100%;
-  height: 40%;
+  height: 30%;
   position: relative;
   margin: auto;
   overflow: hidden;
@@ -164,4 +163,32 @@ height: auto;
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
+}
+
+
+.introducer {
+    margin: auto;
+    width: 80%;    
+}
+
+.serviceContainer {    
+    background-color: #333;
+    width: 20%;
+    padding: 1%;
+    color: white;
+    float: left;
+    margin: 1%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.serviceContainer img {
+    width: 100%;
+    height: 60%;
+}
+
+
+.contentContainer {    
+    background-color: white;
+    width: 80%;
+    display: block;
+    margin: auto;
 }
