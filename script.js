@@ -43,17 +43,18 @@ function currentSlide(n) {
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
+  //var dots = document.getElementsByClassName("dot");
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
   }
+  /*
   for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
-  }
+  }*/
   slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+  //dots[slideIndex-1].className += " active";
 } 
 
 
@@ -70,3 +71,54 @@ function showSlides2() {
     slides[slideIndex2-1].style.display = "block";
     setTimeout(showSlides2, 5000); // Change image every 5 seconds
 } 
+
+function loadJSON(callback) {
+	//document.getElementById("carContainer").innerHTML = "Hello";
+	
+	var xmlhttp = new XMLHttpRequest();
+	xmlhttp.overrideMimeType("application/json");
+	
+	xmlhttp.open("GET", "data.json", true);
+	xmlhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+				callback(xmlhttp.responseText);
+			}
+		};
+				
+	xmlhttp.send(null);
+}
+
+function init() {
+	loadJSON(function(response) {
+		var actual_JSON = JSON.parse(response);
+
+		var carsArray;
+
+		for (i = 0; actual_JSON.cars.length - 1; i++) {
+			//carsArray.push(new car(actual_JSON.cars[i].name, actual_JSON.cars[i].builtYear));
+			var newCar = new car(actual_JSON.cars[i].name, actual_JSON.cars[i].builtYear);
+            //document.getElementById("Angebote").innerHTML += '<h2>' + newCar.title + '</h2>' + '<p>' + newCar.builtYear + '</p>';
+            document.getElementById("Angebote").innerHTML += '<div class="teamContainer">' +
+                '<table style="width: 100%">' +
+                    '<tr>' +
+                        '<th style="width: 20%; height: 50%; padding: 1em" ><img src="Images/testbild.jpeg" style="width: 80%"  ></th>' +
+                        '<td>' +
+                            '<h3>' + newCar.title +'</h3>' +
+                            '<p>Baujahr: ' + newCar.builtYear + ' Preis: <span style="color:red">3000,00 €</span></p>' +                            
+                            '<p><ins>Details:</ins></p> ' +
+                            '<p style="width: 80%">Sitzheizung, Rückfahrkamera ...</p>' +
+                        '</td>' +
+                    '</tr>' +
+                '</table>' +
+            '</div>'
+		}
+
+
+		//alert("It's a " + actual_JSON.name);
+	});
+}
+
+function car(title, builtYear) {
+	this.title = title;
+	this.builtYear = builtYear;
+}
