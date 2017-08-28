@@ -122,3 +122,29 @@ function car(title, builtYear) {
 	this.title = title;
 	this.builtYear = builtYear;
 }
+
+
+// -------------- Login modal -----------
+function showLoginModal() {
+    document.getElementById("loginModal").style.display = "block";
+
+    var button = document.getElementById("submitButton");
+        
+}
+
+function hideLoginModal() {
+    document.getElementById("loginModal").style.display = "none";
+}
+
+function login() {
+    var uname = document.getElementById('uname').value;
+    var pw = document.getElementById('psw').value;
+    
+    window.location.href = "editorBereich.html";
+    //document.getElementById("loginModal").style.display = "none";
+
+    
+
+}
+
+//---------------------------------------

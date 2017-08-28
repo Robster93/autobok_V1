@@ -4,39 +4,42 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, inital-scale=1">
         <link rel="stylesheet" type="text/css" href="Styles.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
         <script src="script.js" type="text/javascript"></script>
     </head>
     <body onload="showSlides2();">
-        <div class="logoContainer">
-            <img src="Images/Logo.JPG">
-        </div>
-                    
-        <div class="topnav" id="myTopnav">
-            <a href="#Home" class="tabLinks" onclick="openTab('Home')">Home</a>
-            <a href="#Service" class="tabLinks" onclick="openTab('Service')">Service</a>
-            <a href="#Team" class="tabLinks" onclick="openTab('Team')">Team</a>
-            <a href='#Angebote' class="tabLinks" onclick="openTab('Angebote'); init();">Angebote</a>
-            <a href="#Kontakt" class="tabLinks" onclick="openTab('Kontakt')">Kontakt</a>
-            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="responsiveNavAdjuster()">&#9776;</a>
+        <div>
+            <div class="logoContainer">
+                <img src="Images/Logo.JPG">
+            </div>
+                        
+            <div class="topnav" id="myTopnav">
+                <a href="#Home" class="tabLinks" onclick="openTab('Home')">Home</a>
+                <a href="#Service" class="tabLinks" onclick="openTab('Service')">Service</a>
+                <a href="#Team" class="tabLinks" onclick="openTab('Team')">Team</a>
+                <a href='#Angebote' class="tabLinks" onclick="openTab('Angebote'); init();">Angebote</a>
+                <a href="#Kontakt" class="tabLinks" onclick="openTab('Kontakt')">Kontakt</a>
+                <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="responsiveNavAdjuster()">&#9776;</a>
+            </div>
         </div>
                     
         <div id="Home" class="tabContent" style="display: block; height: 100%;" >
              <div class="slideshow-container">
                 <div class="mySlides fade">
                     <div class="numbertext"></div>
-                    <img src="Images/testbild.jpeg" style="display: block; margin: auto; width: 100%; height: 100%;">
+                    <img src="Images/testbild.jpeg" style="display: block; margin: auto; height: 100%;">
                     <div class="text"></div>
                 </div>
 
                 <div class="mySlides fade">
                     <div class="numbertext"></div>
-                    <img src="Images/Logo.JPG" style="display: block; margin: auto; width: 100%; height: 100%;">
+                    <img src="Images/Logo.JPG" style="display: block; margin: auto; height: 100%;">
                     <div class="text"></div>
                 </div>
 
                 <div class="mySlides fade">
                     <div class="numbertext"></div>
-                    <img src="Images/testbild.jpeg" style="display: block; margin: auto; width: 100%; height: 100%;">
+                    <img src="Images/testbild.jpeg" style="display: block; margin: auto; height: 100%;">
                     <div class="text"></div>
                 </div>
 
@@ -92,7 +95,7 @@
                 <div class="teamContainer">
                     <table style="width: 100%">
                         <tr>
-                            <th style="width: 20%; height: 50%; padding: 1em" ><img src="Images/testbild.jpeg" style="width: 80%"  ></th>
+                            <th style="width: 20%; height: 50%; padding: 1em" ><img src="Images/PassBild.png" style="width: 80%"  ></th>
                             <td>
                                 <h1 >Edward Bok</h1>
                                 <p>Geschäftsführer und KFZ-Meister</p>
@@ -104,7 +107,7 @@
                 <div class="teamContainer">
                     <table style="width: 100%">
                         <tr>
-                            <th style="width: 20%; height: 50%; padding: 1em" ><img src="Images/testbild.jpeg" style="width: 80%"  ></th>
+                            <th style="width: 20%; height: 50%; padding: 1em" ><img src="Images/PassBild.png" style="width: 80%"  ></th>
                             <td>
                                 <h1>Frau Grüne</h1>
                                 <p>Sekretärin</p>
@@ -126,12 +129,31 @@
             <h1 class="introducer">Kontakt</h1>
             <br>
             <div id="indroducer_div" class="introducer">
-                    <h4 id="indroducer_header">AUTO-BOK</h4>
-                    <p id="introducer_text">Tel.: 07031 81 55 70</p>
-                    <p>Böblinger Str. 124</p>
-                    <p>60000 Sindelfingen</p>
-                </div>
+                <h4 id="indroducer_header">AUTO-BOK</h4>
+                <p id="introducer_text">Tel.: 07031 81 55 70</p>
+                <p>Email: <ins>autobok@autobok.de</ins></p>
+                <p>Böblinger Str. 124</p>
+                <p>60000 Sindelfingen</p>
+            </div>
         </div>
+
+        <!-- Login Part -->
+        <button type="button" onclick="showLoginModal()" style="position: fixed; bottom: 0; right: 0; background-color: white; border: 0; color: lightgrey;"><i class="material-icons">lock</i></button>
+
+        <div id="loginModal" class="modal">
+            <form class="modal-content animateLogin" action="login.php" method="post">
+                <span class="close" onclick="hideLoginModal()">&times</span>
+                <h2>Login zum Adminbereich</h2>
+                <label><b>Username:</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <label><b>Password:</b></label>
+                <input type="text" name="psw" placeholder="Enter Password" required>
+
+                <input type="submit">
+            </div>
+        </div>
+
                  
     </body>
 </html>
