@@ -141,7 +141,7 @@
         <button type="button" onclick="showLoginModal()" style="position: fixed; bottom: 0; right: 0; background-color: white; border: 0; color: lightgrey;"><i class="material-icons">lock</i></button>
 
         <div id="loginModal" class="modal">
-            <form class="modal-content animateLogin" action="login.php" method="post">
+            <form role="form" class="modal-content animateLogin" action="login.php" method="POST">
                 <span class="close" onclick="hideLoginModal()">&times</span>
                 <h2>Login zum Adminbereich</h2>
                 <label><b>Username:</b></label>
@@ -151,7 +151,7 @@
                 <input type="text" name="psw" placeholder="Enter Password" required>
 
                 <input type="submit">
-            </div>
+            </form>
         </div>
 
                  

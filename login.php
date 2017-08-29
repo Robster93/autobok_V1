@@ -1,8 +1,24 @@
-<html>
-<body>
+<?php
+// variables
+$uname = $pw = "";
 
-Welcome <?php echo $_POST["uname"]; ?><br>
-Your email address is: <?php echo $_POST["psw"]; ?>
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $uname = test_input($_POST["uname"]);
+    $pw = test_input($_POST["psw"]);
+    echoContent($_POST["uname"], $_POST["psw"]);
+}
 
-</body>
-</html>
+function test_input($data) {
+    $data = trim($data);
+    $data = stripcslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+
+function echoContent($uname2, $pw2) {
+    echo "<h2>Your Input:</h2>";
+    echo $uname2;
+    echo "<br>";
+    echo $pw2;
+}
+?>
